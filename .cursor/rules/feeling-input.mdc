@@ -1,0 +1,18 @@
+---
+description: How to handle feelings/emotions expressed by the user
+alwaysApply: true
+---
+
+# Feeling Input Handling
+
+When the user describes or mentions a feeling (e.g. in text, as part of a prompt, or as context for a feature), treat their free-form description as valid input.
+
+- **Never force a choice** between a fixed set of preset options when the user has already written or implied a feeling in their own words.
+- If you need to ask about feelings, accept open-ended text answers — don't limit to 3 (or any fixed number of) predefined choices via `AskQuestion` when the user's own phrasing is available.
+- If the user writes a feeling directly, use that exact feeling rather than mapping it to the nearest preset option.
+
+## Example
+
+❌ BAD — User said "I feel overwhelmed" but you ask: "Choose one: Stressed / Anxious / Sad"
+
+✅ GOOD — User said "I feel overwhelmed", so you use "overwhelmed" directly.
