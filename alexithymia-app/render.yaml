@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: resensio
+    runtime: node
+    rootDir: .
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /opt/render/project/data
+    disk:
+      name: resensio-data
+      mountPath: /opt/render/project/data
+      sizeGB: 1

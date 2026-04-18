@@ -1,0 +1,78 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  .cover {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, #1a1535 0%, #2d2760 40%, #4a3fa0 70%, #6C63D5 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .bg-orb-1 { position: absolute; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle at 35% 32%, #8f89e8 0%, #5a52c8 40%, #2d2760 100%); top: -80px; right: -80px; opacity: 0.5; }
+  .bg-orb-2 { position: absolute; width: 180px; height: 180px; border-radius: 50%; background: radial-gradient(circle at 35% 32%, #a09af5 0%, #6C63D5 50%, #3b3494 100%); bottom: -50px; left: 30px; opacity: 0.35; }
+  .bg-orb-3 { position: absolute; width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(156,147,245,0.3); top: 60px; left: 70px; }
+  .bg-orb-4 { position: absolute; width: 110px; height: 110px; border-radius: 50%; border: 0.5px solid rgba(156,147,245,0.2); bottom: 70px; right: 110px; }
+
+  .center {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .orb {
+    width: 110px; height: 110px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #b8b3f8 0%, #6C63D5 45%, #2d2860 100%);
+    position: relative;
+  }
+  .orb::after {
+    content: '';
+    position: absolute;
+    top: 15px; left: 20px;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.28);
+    filter: blur(5px);
+  }
+
+  .wordmark {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 52px;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+    line-height: 1;
+  }
+  .wordmark span { color: #9B93F5; }
+
+  .tagline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #7B74C8;
+  }
+</style>
+
+<div class="cover">
+  <div class="bg-orb-1"></div>
+  <div class="bg-orb-2"></div>
+  <div class="bg-orb-3"></div>
+  <div class="bg-orb-4"></div>
+  <div class="center">
+    <div class="orb"></div>
+    <div class="wordmark"><span>Re</span>sensio</div>
+    <div class="tagline">Feel what's inside</div>
+  </div>
+</div>

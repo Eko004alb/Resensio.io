@@ -1,0 +1,39 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="orb3d" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(212 200) rotate(48) scale(224)">
+      <stop offset="0" stop-color="#B8B3F8"/>
+      <stop offset="0.45" stop-color="#6C63D5"/>
+      <stop offset="1" stop-color="#2D2860"/>
+    </radialGradient>
+    <radialGradient id="specular" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(214 201) rotate(90) scale(54)">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softBlur" x="164" y="158" width="108" height="92" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="5" result="effect1_foregroundBlur"/>
+    </filter>
+    <filter id="orbDropShadow" x="104" y="110" width="324" height="346" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="18"/>
+      <feGaussianBlur stdDeviation="16"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.102 0 0 0 0 0.086 0 0 0 0 0.255 0 0 0 0.45 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="256" cy="378" rx="98" ry="28" fill="#2D2860" fill-opacity="0.24"/>
+  <ellipse cx="265" cy="369" rx="74" ry="19" fill="#1A1535" fill-opacity="0.2"/>
+
+  <g filter="url(#orbDropShadow)">
+    <circle cx="256" cy="256" r="112" fill="url(#orb3d)"/>
+  </g>
+  <g filter="url(#softBlur)">
+    <ellipse cx="214" cy="199" rx="46" ry="35" fill="url(#specular)"/>
+  </g>
+  <ellipse cx="294" cy="314" rx="34" ry="24" fill="#1A1535" fill-opacity="0.18"/>
+</svg>

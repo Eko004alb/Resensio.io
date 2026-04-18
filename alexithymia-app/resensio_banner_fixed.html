@@ -1,0 +1,139 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  .banner {
+    width: 100%;
+    aspect-ratio: 16 / 5;
+    background: linear-gradient(135deg, #0f0d1e 0%, #1a1535 30%, #2d2760 60%, #4a3fa0 85%, #6C63D5 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    border-radius: 12px;
+  }
+
+  .bg1 { position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #6C63D5 0%, #2d2760 60%, transparent 100%); top: -200px; right: -100px; opacity: 0.4; }
+  .bg2 { position: absolute; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #9B93F5 0%, #3b3494 60%, transparent 100%); bottom: -120px; left: -60px; opacity: 0.3; }
+  .bg3 { position: absolute; width: 180px; height: 180px; border-radius: 50%; border: 1px solid rgba(156,147,245,0.15); top: 20px; left: 160px; }
+  .bg4 { position: absolute; width: 90px; height: 90px; border-radius: 50%; border: 0.5px solid rgba(156,147,245,0.12); bottom: 30px; right: 300px; }
+  .bg5 { position: absolute; width: 40px; height: 40px; border-radius: 50%; border: 0.5px solid rgba(156,147,245,0.18); top: 40px; right: 320px; }
+
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(156,147,245,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(156,147,245,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Left — logo */
+  .left {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex: 0 0 auto;
+  }
+
+  .orb {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #c4c0fa 0%, #6C63D5 45%, #2d2860 100%);
+    position: relative;
+    flex-shrink: 0;
+  }
+  .orb::after {
+    content: '';
+    position: absolute;
+    top: 12px; left: 16px;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    filter: blur(5px);
+  }
+
+  .text-group { display: flex; flex-direction: column; gap: 8px; }
+
+  .wordmark {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 58px;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .wordmark span { color: #9B93F5; }
+
+  .tagline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #6B64B8;
+    white-space: nowrap;
+  }
+
+  /* Divider */
+  .divider {
+    position: relative;
+    z-index: 2;
+    width: 0.5px;
+    height: 60px;
+    background: rgba(156,147,245,0.2);
+    flex-shrink: 0;
+  }
+
+  /* Right — info */
+  .right {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    flex: 0 0 auto;
+  }
+  .right p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    color: rgba(156,147,245,0.55);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+</style>
+
+<div class="banner">
+  <div class="grid"></div>
+  <div class="bg1"></div>
+  <div class="bg2"></div>
+  <div class="bg3"></div>
+  <div class="bg4"></div>
+  <div class="bg5"></div>
+
+  <div class="left">
+    <div class="orb"></div>
+    <div class="text-group">
+      <div class="wordmark"><span>Re</span>sensio</div>
+      <div class="tagline">Feel what's inside</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="right">
+    <p>Emotional awareness</p>
+    <p>TAS-20 certified scale</p>
+    <p>Emotional journal</p>
+    <p>Science-backed</p>
+  </div>
+</div>

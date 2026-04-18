@@ -1,0 +1,42 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .row { display: flex; align-items: center; gap: 32px; padding: 2rem; flex-wrap: wrap; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .size-label { font-family: 'DM Sans', sans-serif; font-size: 11px; color: var(--color-text-secondary); letter-spacing: 0.08em; }
+
+  .orb { border-radius: 50%; background: radial-gradient(circle at 35% 30%, #b8b3f8 0%, #6C63D5 45%, #2d2860 100%); position: relative; flex-shrink: 0; }
+  .orb::after { content: ''; position: absolute; border-radius: 50%; background: rgba(255,255,255,0.28); filter: blur(30%); }
+
+  .orb-64 { width: 64px; height: 64px; }
+  .orb-64::after { top: 10px; left: 14px; width: 18px; height: 18px; filter: blur(4px); }
+
+  .orb-40 { width: 40px; height: 40px; }
+  .orb-40::after { top: 6px; left: 9px; width: 11px; height: 11px; filter: blur(3px); }
+
+  .orb-24 { width: 24px; height: 24px; }
+  .orb-24::after { top: 4px; left: 5px; width: 7px; height: 7px; filter: blur(2px); }
+
+  .orb-16 { width: 16px; height: 16px; }
+  .orb-16::after { top: 2px; left: 3px; width: 5px; height: 5px; filter: blur(1.5px); }
+</style>
+
+<div class="row">
+  <div class="item">
+    <div class="orb orb-64"></div>
+    <div class="size-label">64px</div>
+  </div>
+  <div class="item">
+    <div class="orb orb-40"></div>
+    <div class="size-label">40px</div>
+  </div>
+  <div class="item">
+    <div class="orb orb-24"></div>
+    <div class="size-label">24px</div>
+  </div>
+  <div class="item">
+    <div class="orb orb-16"></div>
+    <div class="size-label">16px</div>
+  </div>
+</div>
