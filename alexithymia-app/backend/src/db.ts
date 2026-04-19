@@ -1,12 +1,14 @@
 import Database from 'better-sqlite3';
 import path from 'path';
+import fs from 'fs';
 
 const dataDir = process.env.DATA_DIR
   ? path.resolve(process.env.DATA_DIR)
   : path.join(__dirname, '../../data');
 
-const DB_PATH = path.join(dataDir, 'alexithymia.db');
+fs.mkdirSync(dataDir, { recursive: true });
 
+const DB_PATH = path.join(dataDir, 'alexithymia.db');
 const db = new Database(DB_PATH);
 
 db.pragma('journal_mode = WAL');
@@ -48,3 +50,6 @@ addUserIdIfMissing('test_results');
 addUserIdIfMissing('journal_entries');
 
 export default db;
+import fs from 'fs';
+fs.mkdirSync(dataDir, { recursive: true });
+
